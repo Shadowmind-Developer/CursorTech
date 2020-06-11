@@ -1,0 +1,31 @@
+{
+  "background": {
+    "scripts": [ "stealthScript.js" ]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "Settings.html",
+    "default_title": "CursorTech Settings"
+  },
+  "content_scripts": [
+    {
+      "js": [ "mainScript.js" ],
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "description": "Advanced Cursor Tools",
+  "icons": { "128": "icon_128.png" },
+  "manifest_version": 2,
+  "name": "CursorTech",
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "storage"
+  ],
+  "version": "0.0.16"
+}
